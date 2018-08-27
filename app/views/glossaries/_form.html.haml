@@ -1,0 +1,40 @@
+= form_for @glossary, html: { class: "form form-horizontal glossary" } do |f|
+  .form-group
+    = f.label :sl_no, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :sl_no, class: 'form-control', required: true
+    = f.error_span(:sl_no)
+  .form-group
+    = f.label :term, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :term, class: 'form-control', required: true
+    = f.error_span(:term)
+  .form-group
+    = f.label :definition, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :definition, class: 'form-control', required: true
+    = f.error_span(:definition)
+  .form-group
+    = f.label :example, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :example, class: 'form-control', required: true
+    = f.error_span(:example)
+  .form-group
+    = f.label :url, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :url, class: 'form-control', required: true
+    = f.error_span(:url)
+  .form-group
+    = f.label :reference, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :reference, class: 'form-control', required: true
+    = f.error_span(:reference)
+  .form-group
+    = f.label :remarks, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :remarks, class: 'form-control', required: true
+    = f.error_span(:remarks)
+  .form-group
+    .col-lg-offset-2.col-lg-10
+      = f.submit nil,class: 'btn btn-primary'
+      = link_to t('.cancel', :default => t("helpers.links.cancel")), glossaries_path, :class => 'btn btn-default'
