@@ -11,4 +11,5 @@ class Glossary
   field :topic, type: String
   field :reference, type: String
   field :remarks, type: String
+  field :url, type: String
 end
